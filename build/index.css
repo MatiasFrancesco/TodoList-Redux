@@ -1,0 +1,33 @@
+#root {
+    text-align: center;
+}
+
+#title {
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+.itf-textBar {
+    width: 25vw;
+    padding: 2vw;
+    border-radius: 20vw 0vw 0vw 20vw;
+    border-right: none;
+    border-width: 1px;
+    border-color: rgb(65, 63, 63);
+    font-size: 1.4vw;
+
+}
+
+.itf-subBtn {
+    padding: 1.44vw 2vw 1.85vw 2vw;
+    position: relative;
+    border-radius: 0vw 20vw 20vw 0vw;
+    border-width: 1px;
+    border-color: rgb(65, 63, 63);
+    
+}
+.fa-plus{
+    font-size: 2vw;
+}

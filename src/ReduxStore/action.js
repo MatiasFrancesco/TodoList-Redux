@@ -1,30 +1,30 @@
 import * as actions from "./actionsType";
 
 
-export const bugAdder = description => ({
-    type: actions.BUG_ADDED,
+export const todoAdder = description => ({
+    type: actions.TODO_ADDED,
     payload:{
         description
     }
 })
 
-export const bugModifier = (id, description) => ({
-    type: actions.BUG_MODIFIED,
+export const todoModifier = (id, description) => ({
+    type: actions.TODO_MODIFIED,
     payload:{
         id,
         description
     }
 })
 
-export const bugResolver = id => ({
-    type: actions.BUG_RESOLVED,
+export const todoResolver = id => ({
+    type: actions.TODO_RESOLVED,
     payload:{
         id
     }
 })
 
-export const bugRemover = id => ({
-    type: actions.BUG_REMOVED,
+export const todoRemover = id => ({
+    type: actions.TODO_REMOVED,
     payload:{
         id
     }

@@ -1,18 +1,45 @@
 import * as actions from "./ReduxStore/action";
 import { store } from "./ReduxStore/store";
+import App from "./components/app";
+import React from "react";
+import  ReactDOM  from "react-dom/client";
+import { Provider } from "react-redux";
+
+
 
 const unsubscribe = store.subscribe(() => console.log("store changed!!", store.getState()));
 
-store.dispatch(actions.bugAdder("BUG 1"));
-store.dispatch(actions.bugAdder("BUG 2 to modify desc"));
-store.dispatch(actions.bugAdder("BUG 3 to set resolved"));
-store.dispatch(actions.bugAdder("BUG 4 to delete with no alert"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-store.dispatch(actions.bugModifier(2, "BUG 2 desc modified"));
-store.dispatch(actions.bugResolver(3));
+root.render(
+    <Provider store={store}>
+        <App/>
+    </Provider>
+)
 
-unsubscribe();
 
-store.dispatch(actions.bugRemover(4));
 
-console.log(store.getState())
+
+
+
+
+
+
+
+
+
+
+
+// store.dispatch(actions.todoAdder("todo 1"));
+// store.dispatch(actions.todoAdder("todo 2 to modify desc"));
+// store.dispatch(actions.todoAdder("todo 3 to set resolved"));
+// store.dispatch(actions.todoAdder("todo 4 to delete with no alert"));
+
+// store.dispatch(actions.todoModifier(2, "todo 2 desc modified"));
+// store.dispatch(actions.todoResolver(3));
+
+// unsubscribe();
+
+// store.dispatch(actions.bugRemover(4));
+
+// console.log(store.getState())

@@ -4,7 +4,7 @@ let lastId = 0;
 
 export const reducer = (state = [], action) => {
     switch (action.type) {
-        case actions.BUG_ADDED:
+        case actions.TODO_ADDED:
             return [
                 ...state,
                 {
@@ -14,15 +14,15 @@ export const reducer = (state = [], action) => {
                 }
             ];
 
-        case actions.BUG_MODIFIED:
+        case actions.TODO_MODIFIED:
             return state.map(bug => bug.id !== action.payload.id ? bug : { ...bug, description: action.payload.description });
 
-        case actions.BUG_RESOLVED:
+        case actions.TODO_RESOLVED:
             return state.map(bug => bug.id !== action.payload.id ? bug : { ...bug, resolved: true });
 
-        case actions.BUG_REMOVED:
+        case actions.TODO_REMOVED:
             return state.filter(bug => bug.id !== action.payload.id);
-            
+TODO
         default:
             return state
     }

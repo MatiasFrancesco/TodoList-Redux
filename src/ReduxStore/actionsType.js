@@ -1,4 +1,4 @@
-export const BUG_ADDED = "BugAdded"; //add a new bug report
-export const BUG_MODIFIED = "BugModified"; //can change the description
-export const BUG_REMOVED = "BugRemoved";//remove the selected bug
-export const BUG_RESOLVED = "BugResolved";//flag the selected bug as resolved
+export const TODO_ADDED = "TodoAdded"; //add a new bug report
+export const TODO_MODIFIED = "TodoModified"; //can change the description
+export const TODO_REMOVED = "TodoRemoved";//remove the selected bug
+export const TODO_RESOLVED = "TodoResolved";//flag the selected bug as resolved
