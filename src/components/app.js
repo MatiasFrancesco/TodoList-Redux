@@ -6,8 +6,8 @@ import { Form, Button, FormControl } from "react-bootstrap";
 import { store } from "../ReduxStore/store";
 import * as actions from "../ReduxStore/action";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFlagCheckered, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { faPenToSquare, faFlag, faSquare, faTrashCan } from "@fortawesome/free-regular-svg-icons";
+import { faFlag, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPenToSquare, faFlag as faFlagSolid, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { useSelector } from "react-redux";
 
 
@@ -18,9 +18,9 @@ function App() {
     console.log(state)
 
     return (
-        <div>
+        <div id="div1">
             <h2 id='title'>Todo List 1!!</h2>
-            <Form className="insertTodoForm">
+            <Form id="insertTodoForm">
                 <Form.Group>
                     <Form.Control
                         className="itf-textBar"
@@ -40,7 +40,7 @@ function App() {
             </Form>
 
             {/* <Todos /> */}
-            <div>
+            <div id="div2">
                 {
                     state.map(todo => {
 
@@ -54,20 +54,20 @@ function App() {
                                 ></Form.Control>
 
                                 <Button
-                                    className="modify-todo-btn"
+                                    className="modify-todo-btn todo-btn"
                                     onClick={() => store.dispatch(actions.todoModifier(todo.id, newDescription))}>
                                     <FontAwesomeIcon icon={faPenToSquare} />
                                 </Button>
 
                                 <Button
-                                    className="flag-todo-btn"
+                                    className="flag-todo-btn todo-btn"
                                     onClick={() => store.dispatch(actions.todoResolver(todo.id))}
                                 >
-                                    <FontAwesomeIcon icon={todo.resolved === false ? faFlag : faFlagCheckered} />
+                                    <FontAwesomeIcon icon={todo.resolved === true ? faFlag : faFlagSolid} />
                                 </Button>
 
                                 <Button 
-                                    className="delete-todo-btn"
+                                    className="delete-todo-btn todo-btn"
                                     onClick={() => store.dispatch(actions.todoRemover(todo.id))}
                                 >
                                     <FontAwesomeIcon icon={faTrashCan} />

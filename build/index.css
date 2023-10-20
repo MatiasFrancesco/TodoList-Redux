@@ -1,39 +1,57 @@
-/* #root { 
-    text-align: center;
+body{
+    background-color: antiquewhite;
 }
 
-#title {
-    font-size: 4vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+#root{
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 25vw;
+    margin-right: auto;
+}
+#title{
+    text-align: left;
+    font-size: 3.5vw;
+    margin-bottom: 5vh;
+    margin-left: 10vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-.itf-textBar {
-    width: 25vw;
-    padding: 2vw;
-    border-radius: 20vw 0vw 0vw 20vw;
-    border-right: none;
-    border-width: 1px;
-    border-color: rgb(65, 63, 63);
-    font-size: 1.4vw;
-
-}
-
-.itf-subBtn {
-    padding: 1.44vw 2vw 1.85vw 2vw;
-    position: relative;
-    border-radius: 0vw 20vw 20vw 0vw;
-    border-width: 1px;
-    border-color: rgb(65, 63, 63);
-    
-}
-.fa-plus{
+#todoAdder{
+    width: 35vw;
+    height: 3vh;
     font-size: 2vw;
+    border-radius: 2vw;
+    border-color: rgba(146, 146, 146, 0.664);
+    padding-left: 1.3vw;
 }
 
-#todos{
-    display: relative;
-    margin: 10vw;
+.itf-subBtn{
+    height: 4vh;
+    border-radius: 2vw;
+    border-color: rgba(146, 146, 146, 0.664);
+    margin-left: 2vw;
+}
 
-}*/
+.todo-group{
+    width: 50vw;
+    height: 2vh;
+    margin-top: 5vh;
+    margin-left: 0vw;
+    margin-bottom: 1vw;
+}
+
+.todo-group .form-control{
+    font-size: 2vw;
+    padding-left: 2vw;
+    border-radius: 3vw;
+    border-color: rgba(146, 146, 146, 0.664);
+    padding: 1vw;
+}
+
+
+.todo-btn{
+    margin-left: 2vw;
+    border-radius: 3vw;
+    border-color: rgba(146, 146, 146, 0.664);
+    height: 5vh;
+}
