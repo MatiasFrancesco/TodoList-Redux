@@ -15,14 +15,13 @@ export const reducer = (state = [], action) => {
             ];
 
         case actions.TODO_MODIFIED:
-            return state.map(bug => bug.id !== action.payload.id ? bug : { ...bug, description: action.payload.description });
+            return state.map(todo => todo.id !== action.payload.id ? todo : { ...todo, description: action.payload.description });
 
         case actions.TODO_RESOLVED:
-            return state.map(bug => bug.id !== action.payload.id ? bug : { ...bug, resolved: true });
+            return state.map(todo => todo.id !== action.payload.id ? todo : { ...todo, resolved: true });
 
         case actions.TODO_REMOVED:
-            return state.filter(bug => bug.id !== action.payload.id);
-TODO
+            return state.filter(todo => todo.id !== action.payload.id)
         default:
             return state
     }
