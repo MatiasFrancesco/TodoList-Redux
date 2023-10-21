@@ -18,8 +18,8 @@ function App() {
     console.log(state)
 
     return (
-        <div id="div1">
-            <h2 id='title'>Todo List 1!!</h2>
+        <div id="wrapper-1">
+
             <Form id="insertTodoForm">
                 <Form.Group>
                     <Form.Control
@@ -38,6 +38,7 @@ function App() {
                     </Button>
                 </Form.Group>
             </Form>
+
 
             {/* <Todos /> */}
             <div id="div2">
@@ -66,7 +67,7 @@ function App() {
                                     <FontAwesomeIcon icon={todo.resolved === true ? faFlag : faFlagSolid} />
                                 </Button>
 
-                                <Button 
+                                <Button
                                     className="delete-todo-btn todo-btn"
                                     onClick={() => store.dispatch(actions.todoRemover(todo.id))}
                                 >

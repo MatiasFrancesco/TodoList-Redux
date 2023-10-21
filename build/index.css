@@ -1,57 +1,116 @@
-body{
-    background-color: antiquewhite;
+body {
+    background-color: #1a102b;
 }
 
-#root{
-    position: absolute;
-    margin-top: 10vh;
-    margin-left: 25vw;
-    margin-right: auto;
-}
-#title{
-    text-align: left;
+
+#title {
+    text-align: center;
     font-size: 3.5vw;
-    margin-bottom: 5vh;
-    margin-left: 10vw;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: monospace;
+    color: whitesmoke;
 }
 
-#todoAdder{
-    width: 35vw;
-    height: 3vh;
+
+
+
+#wrapper-1 {
+    margin-left: 28%;
+    margin-right: 30%;
+}
+
+#insertTodoForm {
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+}
+
+
+
+#todoAdder {
+    width: 100%;
+
     font-size: 2vw;
-    border-radius: 2vw;
-    border-color: rgba(146, 146, 146, 0.664);
-    padding-left: 1.3vw;
+    color: whitesmoke;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 0.5vh 1vw;
+}
+::placeholder{
+    color: whitesmoke;
 }
 
-.itf-subBtn{
-    height: 4vh;
-    border-radius: 2vw;
-    border-color: rgba(146, 146, 146, 0.664);
-    margin-left: 2vw;
+.itf-subBtn {
+    position: absolute;
+    right: -6%;
+    top: 0;
+
+    border: 2px solid white;
+    border-radius: 50px;
+    font-size: 2vw;
+    padding: 0.5vh 1vw;
+    background-color: white;
 }
 
-.todo-group{
-    width: 50vw;
-    height: 2vh;
+
+
+
+
+
+.todo-group {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+
     margin-top: 5vh;
-    margin-left: 0vw;
     margin-bottom: 1vw;
 }
 
-.todo-group .form-control{
+.todo-group .form-control {
+    width: 100%;
+
+
     font-size: 2vw;
-    padding-left: 2vw;
-    border-radius: 3vw;
-    border-color: rgba(146, 146, 146, 0.664);
-    padding: 1vw;
+    padding: 0.5vh 1vw;
+    border-radius: 50px;
+    border: 2px solid white;
+    background-color: rgba(255,255,255, 0.3);
+    color: whitesmoke;
+    
 }
 
 
-.todo-btn{
-    margin-left: 2vw;
-    border-radius: 3vw;
-    border-color: rgba(146, 146, 146, 0.664);
-    height: 5vh;
+.todo-btn {
+    font-size: 2vw;
+    padding: 0.5vh 1vw;
+    background-color: white;
+    border: 2px solid white
+    /* margin-left: 2vw;
+    padding: 0.5vh 1vw;
+    border-radius: 50px;
+    border-color: white;
+    background-color: white; */
+}
+
+.delete-todo-btn{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: absolute;
+    right: -6%;
+    top: 0%;
+}
+
+.flag-todo-btn{
+    border-radius: none;
+    position: absolute;
+    right: 4%;
+    top: 0;
+}
+
+.modify-todo-btn{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    position: absolute;
+    right: 14%;
+    top: 0;
 }
